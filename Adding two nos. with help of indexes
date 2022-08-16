@@ -1,0 +1,8 @@
+# Write a program that adds index in order to give the result that is equivalent to the target that has been provided.
+class Solution:
+  def twoSum(self,nums,target):
+    for i in range (0,len(nums)): ## To check whether the i value lies between 0 and length
+      for j in range (i+1,len(nums)): ## To check whether the next element lies between beyond i and below length of elements in an array.
+        sum=nums[i]+nums[j]
+        if sum==target:
+          return[i,j]
