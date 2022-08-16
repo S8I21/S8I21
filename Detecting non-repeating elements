@@ -7,13 +7,15 @@ class solution:
     value gets incremented we will return the value.##
     ##First we will store it in the array.
     
-    freq = counter(s)
+        counter = Counter(s)
+      
     
     ##now check the frequency of the character from left to right and return 1 if it shows incrementation.##
-    for e in s:
-      if freq[e]==1:
-        return s.index(e)
-      else:
+     for i, c in enumerate(s):
+     enumerate allows us to iterate through the sequence and it also allows to keep the track of index and elements.
+            if counter[c] == 1:
+                return i
+            
         return -1
     
     
