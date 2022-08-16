@@ -1,0 +1,19 @@
+To create the file we have to detect the amount of the time the elements are being repeated.
+
+
+class solution:
+  def firstUniqChar(self,s):
+    ## First of all we will make a track record of how many number of elements are present. Then if it will show increment we will add 1 to it and if 
+    value gets incremented we will return the value.##
+    ##First we will store it in the array.
+    
+    freq = counter(s)
+    
+    ##now check the frequency of the character from left to right and return 1 if it shows incrementation.##
+    for e in s:
+      if freq[e]==1:
+        return s.index(e)
+      else:
+        return -1
+    
+    
